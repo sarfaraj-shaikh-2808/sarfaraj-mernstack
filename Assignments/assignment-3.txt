@@ -1,0 +1,49 @@
+1. Write the full form and one-line use of: HTTP, HTTPS, FTP, SMTP.
+
+HTTP – HyperText Transfer Protocol – Used to transfer web pages between a browser and a server.
+HTTPS – HyperText Transfer Protocol Secure – Used to securely transfer web pages using encryption.
+FTP – File Transfer Protocol – Used to upload and download files over a network.
+SMTP – Simple Mail Transfer Protocol – Used to send emails over the Internet.
+
+
+
+2. What is the difference between IPv4 and IPv6? (2 lines)
+
+IPv4 uses a 32-bit address and supports about 4.3 billion unique addresses.
+IPv6 uses a 128-bit address and supports a very large number of unique addresses.
+
+
+
+3. Run nslookup google.com on your system and write down the IP address you get.
+
+Example Output:
+
+google.com → 142.250.183.14
+
+Note: The IP address may be different on your computer because Google uses multiple servers.
+
+
+
+4. What do these HTTP status codes mean: 200, 301, 404, 500, 403?
+
+200 OK – The request was successful.
+301 Moved Permanently – The page has moved to a new location.
+404 Not Found – The requested page was not found.
+500 Internal Server Error – The server encountered an error.
+403 Forbidden – Access to the requested resource is denied.
+
+
+
+5. Explain DNS hierarchy (root, TLD, domain, subdomain) with www.google.com as an example.
+
+Root (.) – The top level of the DNS hierarchy.
+TLD (Top-Level Domain) – .com
+Domain Name – google
+Subdomain – www
+
+Example: In www.google.com:
+
+Root → .
+TLD → .com
+Domain → google
+Subdomain → www
