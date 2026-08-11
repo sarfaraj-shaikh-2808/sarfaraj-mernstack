@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Social Bio Link Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         Gamer Profile
+         ========================================= -->
+
+    <div class="profile">
+
+        <img src="Gamer.jpg" alt="Gamer Avatar" class="avatar">
+
+        <h1>Shadow Gamer</h1>
+
+        <p>
+            🎮 Gamer | Streamer | Esports Lover
+        </p>
+
+    </div>
+
+
+    <!-- =========================================
+         Gamer Social Links
+         ========================================= -->
+
+    <div class="gamer-links">
+
+        <a href="https://www.twitch.tv/" target="_blank" class="gamer-btn twitch">
+
+            🎮 Twitch
+
+        </a>
+
+
+        <a href="https://discord.com/" target="_blank" class="gamer-btn discord">
+
+            💬 Discord
+
+        </a>
+
+
+        <a href="https://store.steampowered.com/" target="_blank" class="gamer-btn steam">
+
+            🎮 Steam
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         Task 1 & 3
+         Social Music Links Form
+         ========================================= -->
+
+    <div class="container">
+
+        <h2>Add Your Music Links</h2>
+
+        <p class="subtitle">
+            Add your Spotify, YouTube Music and Apple Music links.
+        </p>
+
+
+        <!-- Form name = musicLinksForm -->
+
+        <form id="musicLinksForm">
+
+
+            <!-- Spotify -->
+
+            <div class="input-group">
+
+                <span class="icon spotify-icon">
+                    🎵
+                </span>
+
+                <input type="url" id="spotify" placeholder="Spotify profile URL" required>
+
+            </div>
+
+
+            <!-- YouTube Music -->
+
+            <div class="input-group">
+
+                <span class="icon youtube-icon">
+                    ▶
+                </span>
+
+                <input type="url" id="youtube" placeholder="YouTube Music profile URL" required>
+
+            </div>
+
+
+            <!-- Apple Music -->
+
+            <div class="input-group">
+
+                <span class="icon apple-icon">
+                    
+                </span>
+
+                <input type="url" id="apple" placeholder="Apple Music profile URL" required>
+
+            </div>
+
+
+            <button type="submit">
+                Add Music Links
+            </button>
+
+        </form>
+
+
+        <!-- =====================================
+             Preview Cards
+             ===================================== -->
+
+        <h2 class="preview-title">
+            Your Links
+        </h2>
+
+        <div id="previewCards"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         JavaScript
+         ========================================= -->
+
+    <script>
+
+        const form =
+            document.getElementById("musicLinksForm");
+
+        const previewCards =
+            document.getElementById("previewCards");
+
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            /* Get URLs */
+
+            const spotify =
+                document.getElementById("spotify").value;
+
+            const youtube =
+                document.getElementById("youtube").value;
+
+            const apple =
+                document.getElementById("apple").value;
+
+
+            /* Clear old cards */
+
+            previewCards.innerHTML = "";
+
+
+            /* Create cards */
+
+            createCard(
+                "Spotify",
+                "🎵",
+                spotify,
+                "spotify-card"
+            );
+
+
+            createCard(
+                "YouTube Music",
+                "▶",
+                youtube,
+                "youtube-card"
+            );
+
+
+            createCard(
+                "Apple Music",
+                "",
+                apple,
+                "apple-card"
+            );
+
+
+            /* Clear form */
+
+            form.reset();
+
+        });
+
+
+        /*
+         * Extract username / handle
+         * from the URL.
+         */
+
+        function getHandle(url) {
+
+            try {
+
+                const urlObject =
+                    new URL(url);
+
+                let path =
+                    urlObject.pathname;
+
+                path =
+                    path.replace(/^\/+|\/+$/g, "");
+
+                if (path === "") {
+
+                    return urlObject.hostname;
+
+                }
+
+                const parts =
+                    path.split("/");
+
+                return "@" + parts[parts.length - 1];
+
+            }
+
+            catch {
+
+                return "User";
+
+            }
+
+        }
+
+
+        /*
+         * Create preview card
+         */
+
+        function createCard(
+            platform,
+            icon,
+            url,
+            cardClass
+        ) {
+
+            const handle =
+                getHandle(url);
+
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "preview-card " + cardClass;
+
+
+            card.innerHTML = `
+
+                <div class="platform-icon">
+                    ${icon}
+                </div>
+
+                <div class="card-info">
+
+                    <h3>
+                        ${platform}
+                    </h3>
+
+                    <p>
+                        ${handle}
+                    </p>
+
+                </div>
+
+                <a
+                    href="${url}"
+                    target="_blank"
+                    class="visit-btn">
+
+                    Visit
+
+                </a>
+
+            `;
+
+
+            previewCards.appendChild(card);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

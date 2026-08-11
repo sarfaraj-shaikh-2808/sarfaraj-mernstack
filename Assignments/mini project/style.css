@@ -1,0 +1,369 @@
+/* =========================================
+   General Page
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg,
+            #141e30,
+            #243b55);
+
+    color: white;
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+}
+
+
+/* =========================================
+   Gamer Profile
+   ========================================= */
+
+.profile {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    object-fit: cover;
+}
+
+.profile h1 {
+    margin: 12px 0 5px;
+}
+
+.profile p {
+    margin: 0;
+
+    color: #ddd;
+}
+
+
+/* =========================================
+   Gamer Buttons
+   ========================================= */
+
+.gamer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.gamer-btn {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.twitch {
+    background-color: #9146ff;
+}
+
+.discord {
+    background-color: #5865f2;
+}
+
+.steam {
+    background-color: #171a21;
+}
+
+.gamer-btn:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   Main Container
+   ========================================= */
+
+.container {
+    max-width: 650px;
+
+    margin: auto;
+
+    background-color: white;
+
+    color: #222;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,
+            0,
+            0,
+            0.3);
+}
+
+.container h2 {
+    text-align: center;
+
+    margin-top: 0;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   Task 3: Input Fields
+   ========================================= */
+
+.input-group {
+    position: relative;
+
+    margin-bottom: 15px;
+}
+
+
+/*
+   Platform icon is placed
+   inside the input box.
+*/
+
+.icon {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 20px;
+
+    z-index: 1;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px 15px 14px 50px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #555;
+}
+
+
+/* =========================================
+   Submit Button
+   ========================================= */
+
+form button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+
+/* =========================================
+   Preview Cards
+   ========================================= */
+
+.preview-title {
+    margin-top: 35px !important;
+}
+
+
+.preview-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    border-left: 6px solid;
+
+    background-color: #f8f8f8;
+}
+
+
+.platform-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.card-info {
+    flex: 1;
+}
+
+.card-info h3 {
+    margin: 0 0 5px;
+}
+
+.card-info p {
+    margin: 0;
+
+    color: #666;
+}
+
+
+/* =========================================
+   Different Platform Colors
+   ========================================= */
+
+.spotify-card {
+    border-color: #1db954;
+}
+
+.spotify-card .platform-icon {
+    background-color: #1db954;
+}
+
+
+.youtube-card {
+    border-color: #ff0000;
+}
+
+.youtube-card .platform-icon {
+    background-color: #ff0000;
+}
+
+
+.apple-card {
+    border-color: #555;
+}
+
+.apple-card .platform-icon {
+    background-color: #555;
+}
+
+
+/* =========================================
+   Visit Button
+   ========================================= */
+
+.visit-btn {
+    text-decoration: none;
+
+    background-color: #222;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.visit-btn:hover {
+    background-color: #555;
+}
+
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .gamer-links {
+        flex-direction: column;
+    }
+
+    .gamer-btn {
+        text-align: center;
+    }
+
+    .preview-card {
+        gap: 10px;
+    }
+
+    .visit-btn {
+        padding: 7px 10px;
+    }
+
+}
