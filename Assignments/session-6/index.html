@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 6 - Box Model & Positioning</title>
+
+    <style>
+        /* =========================================
+           Task 1: Zomato-style Restaurant Card
+           ========================================= */
+
+        .restaurant-card {
+            width: 300px;
+
+            /* Box Model */
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .restaurant-name {
+            margin-bottom: 10px;
+        }
+
+        .cuisine {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .rating {
+            margin-top: 10px;
+            padding: 8px;
+            background-color: lightgreen;
+        }
+
+
+        /* =========================================
+           Task 2: Flipkart-style Product Tile
+           ========================================= */
+
+        .product-tile {
+            width: 250px;
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid #ddd;
+        }
+
+        .product-image {
+            display: block;
+            width: 200px;
+        }
+
+        .product-name {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        /* When the hide-price class is added,
+           the price becomes invisible. */
+        .hide-price {
+            display: none;
+        }
+
+
+        /* =========================================
+           Task 3: Fixed WhatsApp Notification
+           ========================================= */
+
+        .whatsapp-badge {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            margin: 10px;
+            padding: 12px 18px;
+
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+        }
+
+
+        /* =========================================
+           Task 4: BookMyShow Movie Poster Grid
+           ========================================= */
+
+        .movie-grid {
+            display: flex;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .movie-poster {
+            position: relative;
+            width: 180px;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            display: block;
+        }
+
+        .new-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+
+        /* =========================================
+           Task 5: Reusable CSS Class
+           ========================================= */
+
+        /*
+          Reusable .box class contains common
+          margin and padding values.
+
+          This improves maintainability because
+          we can change spacing in one place
+          instead of changing it in many selectors.
+        */
+
+        .box {
+            margin: 20px;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Session 6: Box Model & Positioning</h1>
+
+
+    <!-- =========================================
+         Task 1
+         ========================================= -->
+
+    <h2>Task 1 - Restaurant Card</h2>
+
+    <div class="restaurant-card box">
+
+        <h2 class="restaurant-name">
+            Spice Restaurant
+        </h2>
+
+        <p class="cuisine">
+            Indian, Chinese & Fast Food
+        </p>
+
+        <p class="rating">
+            ⭐ Rating: 4.5/5
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================================
+         Task 2
+         ========================================= -->
+
+    <h2>Task 2 - Product Tile</h2>
+
+    <div class="product-tile box">
+
+        <img src="images.jpg" alt="Smartphone" class="product-image">
+
+        <h3 class="product-name">
+            iphone
+        </h3>
+
+        <span class="product-price">
+            ₹1,20,000
+        </span>
+
+    </div>
+
+    <p>
+        To hide the price, add the
+        <b>hide-price</b> class to the price element.
+    </p>
+
+    <!-- Example:
+    <span class="product-price hide-price">
+        ₹20,000
+    </span>
+    -->
+
+
+    <hr>
+
+
+    <!-- =========================================
+         Task 3
+         ========================================= -->
+
+    <h2>Task 3 - Fixed WhatsApp Notification</h2>
+
+    <p>
+        Scroll the page. The WhatsApp badge will stay
+        at the bottom-right corner.
+    </p>
+
+    <div class="whatsapp-badge">
+        💬 WhatsApp
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================================
+         Task 4
+         ========================================= -->
+
+    <h2>Task 4 - Movie Poster Grid</h2>
+
+    <div class="movie-grid">
+
+        <!-- Poster 1 -->
+        <div class="movie-poster">
+
+            <span class="new-badge">
+                New
+            </span>
+
+            <img src="movie-1.jpg" alt="New Movie">
+
+        </div>
+
+
+        <!-- Poster 2 -->
+        <div class="movie-poster">
+
+            <img src="movie-2.jpg" alt="Movie 2">
+
+        </div>
+
+
+        <!-- Poster 3 -->
+        <div class="movie-poster">
+
+            <img src="movie-3.jpg" alt="Movie 3">
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================================
+         Task 5
+         ========================================= -->
+
+    <h2>Task 5 - Reusable CSS Class</h2>
+
+    <div class="box">
+        This box uses the reusable .box class.
+    </div>
+
+    <div class="box">
+        This box also uses the same .box class.
+    </div>
+
+
+</body>
+
+</html>
