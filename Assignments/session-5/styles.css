@@ -1,0 +1,40 @@
+/* Task 3: External CSS */
+
+button {
+    background-color: #e23744;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Task 5: Dark Mode */
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+body.dark-mode button:hover {
+    background-color: #666;
+}

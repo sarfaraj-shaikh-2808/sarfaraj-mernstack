@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 3 Practice</title>
+
+    <!-- Task 2: Internal CSS -->
+    <style>
+        .offer-banner {
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: orange;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Task 4: Class Selector */
+        .playlist-item {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        /* Task 4: ID Selector */
+        #currently-playing {
+            background-color: green;
+            color: white;
+        }
+    </style>
+
+    <!-- Task 3: External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- Task 1: Inline CSS             -->
+    <!-- ============================= -->
+
+    <h1>Flipkart Product Card</h1>
+
+    <div>
+        <h2 style="background-color: lightblue; font-size: 30px;">
+            Samsung Galaxy Smartphone
+        </h2>
+
+        <img src="images.jpg" alt="iphone" width="200">
+
+        <p>Powerful iphone with a great camera and perfomance.</p>
+
+        <button>Buy Now</button>
+    </div>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- Task 2: Internal CSS           -->
+    <!-- ============================= -->
+
+    <div class="offer-banner">
+        <h2>🔥 Myntra Special Offer 🔥</h2>
+        <p>Get up to 50% OFF on selected products!</p>
+    </div>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- Task 3: External CSS           -->
+    <!-- ============================= -->
+
+    <h2>Zomato Style Buttons</h2>
+
+    <button>Order Now</button>
+    <button>View Menu</button>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- Task 4: Spotify Playlist       -->
+    <!-- ============================= -->
+
+    <h2>Spotify Playlist</h2>
+
+    <div class="playlist-item">
+        Song 1 - Perfect
+    </div>
+
+    <div class="playlist-item">
+        Song 2 - Believer
+    </div>
+
+    <div class="playlist-item" id="currently-playing">
+        ▶ Currently Playing - Shape of You
+    </div>
+
+    <div class="playlist-item">
+        Song 4 - Memories
+    </div>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- Task 5: Light / Dark Mode      -->
+    <!-- ============================= -->
+
+    <h2>BookMyShow Movie Page</h2>
+
+    <button onclick="toggleDarkMode()">
+        🌙 Toggle Dark Mode
+    </button>
+
+    <div>
+        <h2>Movie: Avengers</h2>
+        <p>
+            Watch the latest movies and book your tickets online.
+        </p>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>
