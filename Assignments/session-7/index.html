@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Session 7 - Flexbox & Grid</title>
+
+    <style>
+        /* =====================================
+           Task 1: Social Icons using Flexbox
+           ===================================== */
+
+        .social-container {
+            display: flex;
+
+            /* Equal space between items */
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .social-container img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+
+        /* =====================================
+           Task 2: Spotify Playlist using Flexbox
+           ===================================== */
+
+        .playlist {
+            display: flex;
+
+            /* Songs are placed horizontally */
+            flex-direction: row;
+
+            gap: 15px;
+
+            align-items: center;
+
+            padding: 20px;
+
+            background-color: #222;
+        }
+
+        .song-card {
+            display: flex;
+
+            /* Vertically center content */
+            align-items: center;
+
+            width: 180px;
+            height: 70px;
+
+            padding: 10px;
+
+            background-color: #444;
+            color: white;
+
+            border-radius: 8px;
+        }
+
+        .song-card h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .song-card p {
+            margin: 5px 0 0;
+            font-size: 13px;
+        }
+
+
+        /* =====================================
+           Task 3: Flipkart Product Grid
+           ===================================== */
+
+        .product-grid {
+            display: grid;
+
+            /* 3 columns */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 2 rows */
+            grid-template-rows: repeat(2, auto);
+
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+        .product-card {
+            padding: 15px;
+
+            border: 1px solid #ddd;
+
+            text-align: center;
+
+            border-radius: 8px;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+        }
+
+
+        /* =====================================
+           Task 4: Responsive Product Grid
+           ===================================== */
+
+        /* Tablet: 2 columns */
+        @media (max-width: 768px) {
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* Mobile: 1 column */
+        @media (max-width: 480px) {
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Session 7: Flexbox & Grid</h1>
+
+
+    <!-- =====================================
+         Task 1
+         ===================================== -->
+
+    <h2>Task 1 - Social App Icons</h2>
+
+    <div class="social-container">
+
+        <img src="instagram-logo_976174-11.avif" alt="Instagram">
+
+        <img src="green-square-social-media-logo_197792-2919.avif" alt="WhatsApp">
+
+        <img src="zomato.jpg" alt="Zomato">
+
+        <img src="spotify.jpg" alt="Spotify">
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =====================================
+         Task 2
+         ===================================== -->
+
+    <h2>Task 2 - Spotify Playlist</h2>
+
+    <div class="playlist">
+
+        <div class="song-card">
+            <div>
+                <h3>Perfect</h3>
+                <p>Ed Sheeran</p>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div>
+                <h3>Believer</h3>
+                <p>Imagine Dragons</p>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div>
+                <h3>Shape of You</h3>
+                <p>Ed Sheeran</p>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div>
+                <h3>Faded</h3>
+                <p>Alan Walker</p>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div>
+                <h3>Memories</h3>
+                <p>Maroon 5</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =====================================
+         Task 3 & 4
+         ===================================== -->
+
+    <h2>Task 3 & 4 - Product Grid</h2>
+
+    <section class="product-grid">
+
+        <div class="product-card">
+            <img src="phone.jpg" alt="Product 1">
+            <h3>Smartphone</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="laptop.jpg" alt="Product 2">
+            <h3>Laptop</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="headphones.jpeg" alt="Product 3">
+            <h3>Headphones</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="smartwatch.jpg" alt="Product 4">
+            <h3>Smart Watch</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="camera.jpg" alt="Product 5">
+            <h3>Camera</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="keyboard.jpg" alt="Product 6">
+            <h3>Keyboard</h3>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
