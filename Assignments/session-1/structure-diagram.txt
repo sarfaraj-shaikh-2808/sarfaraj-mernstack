@@ -1,0 +1,17 @@
+html
+│
+├── head
+│   ├── meta
+│   ├── meta
+│   └── title
+│
+└── body
+    │
+    ├── h1
+    │   └── Sarfaraj Shaikh
+    │
+    ├── p
+    │   └── Short Bio
+    │
+    └── img
+        └── Laptop Picture
