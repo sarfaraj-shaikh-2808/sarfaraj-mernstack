@@ -1,0 +1,29 @@
+/* =========================================
+   Task 4: Custom Bootstrap Button
+   ========================================= */
+
+/*
+   Bootstrap's default .btn-primary is blue.
+   We override it with our own custom color.
+*/
+
+.btn-primary {
+    background-color: #e91e63;
+    border-color: #e91e63;
+    color: white;
+}
+
+
+/* Button hover effect */
+
+.btn-primary:hover {
+    background-color: #c2185b;
+    border-color: #c2185b;
+    color: white;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+}
