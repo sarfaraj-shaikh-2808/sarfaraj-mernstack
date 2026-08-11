@@ -1,0 +1,84 @@
+/* =========================================
+   Session 12 Custom CSS
+   ========================================= */
+
+
+/* Overall page */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Artist Hero Section */
+
+.hero-section {
+    background-color: #f5f3ff;
+}
+
+
+/* Artist Profile Image */
+
+.artist-image {
+    width: 160px;
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #6f42c1;
+}
+
+
+/* Artist Bio */
+
+.bio {
+    max-width: 600px;
+}
+
+
+/* Product Section */
+
+.product-section {
+    background-color: #f8f9fa;
+}
+
+
+/* Product cards */
+
+.product-section .card,
+#about .card {
+    transition: transform 0.2s;
+}
+
+
+/* Small hover effect */
+
+.product-section .card:hover,
+#about .card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Footer social icons */
+
+footer a {
+    text-decoration: none;
+}
+
+
+/* Mobile adjustment */
+
+@media (max-width: 576px) {
+
+    .artist-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+}
