@@ -1,0 +1,20 @@
+
+ Task 4: Correct Variable Names
+ 
+ | Variable Name | Status     | Correct Name  |
+ | ------------- | ---------  | ------------- |
+ |  1stPlayer    | Invalid    |  firstPlayer  |
+ |  player_age   | Valid      |  player_age   |
+ |  $score       | Invalid    |  score        |
+ |  total-marks  | Invalid    |  total_marks  |
+ |  userName     | Valid      |  userName     |
+
+
+C Variable Naming Rules
+1. A variable name cannot start with a number.
+2. It can contain letters, numbers, and _.
+3. Special symbols like $ are not allowed.
+4. - is not allowed in a variable name.
+5. Spaces are not allowed.
+6. C keywords like int, float, and return cannot be used as variable names.
+7. C is case-sensitive, so age and Age are different variables.

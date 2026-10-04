@@ -1,0 +1,11 @@
+
+
+Task 1: Install GCC and Verify
+ =>
+   First, install GCC (GNU Compiler Collection) on the computer.
+
+   After installation, open Command Prompt / Terminal and type:
+   gcc --version
+   => if GCC is installed correctly, it will show the GCC version and other information.
+
+
