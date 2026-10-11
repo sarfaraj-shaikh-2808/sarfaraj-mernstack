@@ -1,0 +1,19 @@
+Question: Describe the Git workflow your team should adopt to prevent this from happening
+again. Name at least two Git commands your team should use as part of this workflow and
+explain the role of each command.
+
+Answer:
+
+The team should follow a proper Git workflow to avoid code conflicts and losing changes. Each team 
+member should create a separate branch for their work, make changes, and test the code before 
+merging it into the main branch. The team should review the changes before merging.
+
+Git commands and their roles:
+
+1. git pull – Downloads the latest changes from the remote repository and updates the local code.
+
+2. git add – Selects the changed files that should be included in the next commit.
+
+3. git commit – Saves the changes with a message in the local Git repository.
+
+4. git push – Uploads the committed changes to the remote repository.

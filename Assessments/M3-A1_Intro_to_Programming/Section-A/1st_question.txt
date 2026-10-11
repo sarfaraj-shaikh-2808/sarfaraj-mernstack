@@ -1,0 +1,17 @@
+Question: Which development methodology would you recommend for this project, and why?
+Identify two specific risks the team would face if they chose the wrong methodology for this
+context.
+
+Answer:
+
+I recommend the Agile methodology for this project because the requirements change frequently and 
+the client wants to review working features every two weeks. Agile allows the team to develop the 
+project in small parts, take client feedback, and make changes quickly.
+
+Two risks of choosing the wrong methodology:
+
+1. Project delays: Using Waterfall may cause delays because changing requirements can require
+   changes to completed stages.
+
+2. Wasted time and money: The team may develop features that the client no longer needs, resulting
+   in extra work and increased costs.

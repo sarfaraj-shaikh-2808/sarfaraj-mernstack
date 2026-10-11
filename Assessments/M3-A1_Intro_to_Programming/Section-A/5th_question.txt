@@ -1,0 +1,22 @@
+Question: Explain why an array is the correct data structure for this task compared to using 30
+separate variables. Describe the two-step logic your program would follow: first to compute the
+average, then to identify the above-average days — and explain why both steps cannot be done
+in a single loop.
+
+Answer:
+
+An array is the correct data structure because it can store 30 daily values using a single variable name 
+and an index. It makes the program easier to write, manage, and process compared to using 30 
+separate variables.
+
+Two-step logic:
+
+1. Calculate the average: First, use a loop to add all 30 daily values. Then, divide the total by 30 to 
+   calculate the average.
+
+2. Find above-average days: Use a second loop to check each day's value. If a day's value is greater 
+   than the average, display that day.
+
+Both steps cannot be completed in a single normal loop because the average is not known until all 30 
+values have been added. The program must calculate the average first and then compare each day's 
+value with it.

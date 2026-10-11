@@ -1,0 +1,21 @@
+SECTION D — AI-AUGMENTED LEARNING
+ITEM 1: EXACT PROMPT GIVEN TO THE AI TOOL
+
+Use a C program that:
+Accepts exactly 10 integers from the user using a loop and stores them in an array.
+Finds and displays the maximum value, minimum value, and arithmetic mean (displayed as a float with 2 decimal places).
+Sorts the array in ascending order using any sorting method and displays the sorted list.
+Prints whether the mean is closer to the minimum, closer to the maximum, or exactly midway between them.
+
+ITEM 3: DEBUGGING NOTE (3–4 LINES)
+
+The original program did not correctly handle the case where the mean was exactly midway between the minimum and maximum.
+It printed that the mean was closer to the maximum because the equality case was not checked separately.
+I corrected the logic by comparing the distances from the mean to the minimum and maximum and adding a separate equality condition.
+I also used long long for the sum to reduce the risk of integer overflow with large integer inputs.
+
+SUBMISSION FILES
+
+1. AI_Prompt_and_Debugging_Note.txt — prompt and debugging note.
+2. array_analysis_original.c — original AI-generated code.
+3. array_analysis_corrected.c — corrected code.

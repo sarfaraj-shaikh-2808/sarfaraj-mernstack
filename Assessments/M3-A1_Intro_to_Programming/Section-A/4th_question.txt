@@ -1,0 +1,25 @@
+Question: Explain how Bootstrap's grid class system works to produce this responsive layout.
+Write the Bootstrap class combination you would apply to the article column div, and explain
+what each class in the combination controls.
+
+Answer:
+
+Bootstrap uses a 12-column grid system to create responsive layouts. It uses containers, rows, and 
+columns to arrange content. Responsive classes allow the layout to change according to screen size.
+
+Bootstrap class combination for the article column:
+
+<div class="col-12 col-md-8 col-lg-9">
+    <!-- Article content -->
+</div>
+
+Explanation of classes:
+
+1. col-12 – Makes the article occupy all 12 columns on extra-small screens.
+
+2. col-md-8 – Makes the article occupy 8 out of 12 columns on medium screens and larger.
+
+3. col-lg-9 – Makes the article occupy 9 out of 12 columns on large screens and larger.
+
+These classes help the article adjust its width according to the screen size, making the website
+responsive.

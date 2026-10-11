@@ -1,0 +1,29 @@
+Question: Explain why the program crashes on an empty string input and describe the check
+your pointer-based solution must perform before dereferencing the pointer. How does traversing
+a string using a pointer differ from traversing it using array index notation, and which approach
+makes the empty-input bug easier to catch?
+
+Answer:
+
+The program may crash on empty string input because it tries to access a character that does not exist. 
+An empty string contains only the null character '\0', which marks the end of the string.
+
+Before dereferencing a pointer, the program must check that the pointer is not NULL and that the 
+string is not empty. For example:
+
+if (str != NULL && *str != '\0')
+{
+    printf("%c", *str);
+}
+
+
+Pointer traversal vs. array index notation:
+
+=> Pointer traversal: Uses a pointer to access characters and moves to the next character using ptr++.
+
+=> Array index notation: Uses an index such as str[i] to access characters.
+
+
+Pointer traversal can make the empty-string bug easier to catch when the programmer explicitly 
+checks *ptr != '\0' before accessing a character. However, both approaches are safe when proper 
+boundary checks are used.
